@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gee Solution - Galleries</title>
+</head>
+
+<body>
+
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+    <link rel="stylesheet" href="{% static 'style4.css' %}">
+
+{% for gallery in galleries %}
+
+<div class="img">
+    <h3 class="text-3xl text-gray-900">{{ gallery.title }}</h3>
+    <img src="{{ gallery.image.url }}" alt=""/>
+</div>
+<a href="/galleries/{{ gallery.id }}/" class="text-blue-500"><button class="button button5">View details</button></a>
+{% endfor %}
+
+
+{% endblock content %}
+
+</body>
+
+
+</html>
