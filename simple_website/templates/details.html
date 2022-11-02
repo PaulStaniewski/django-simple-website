@@ -1,18 +1,15 @@
-
 {% extends 'base_360degree.html' %}
-
 {% block content %}
 <div class="container pt-3">
-
-      <h1>{{ image.title }}</h1>
-        <a-scene embedded>
-            <a-sky img src="{{ image.image.url }}" alt=""></a-sky>
-        </a-scene>
-    <div class="pt-3">
-        <p>
-        {{ image.summary }}
-        </p>
-        <hr>
-    </div>
+   <h1>{{ image.title }}</h1>
+   <a-scene embedded>
+      <a-sky img src="{{ image.image.url }}" alt=""></a-sky>
+   </a-scene>
+   <div class="pt-3">
+      <p>
+         {{ image.summary }}
+      </p>
+      <hr>
+   </div>
 </div>
 {% endblock %}

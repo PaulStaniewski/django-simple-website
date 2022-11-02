@@ -1,24 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Gee Solution - Gallery</title>
-</head>
-
 {% extends "base.html" %}
 
-{% load static %}
-
-    <link rel="stylesheet" href="{% static 'style4.css' %}">
-
-
 {% block content %}
-
 <div class="px-3 py-2 bg-gray-100 rounded-sm">
     <h3 class="text-3xl text-gray-900">{{ gallery.title }}</h3>
     <img src="{{ gallery.image.url }}" alt=""/>
     <p class="text-gray-600 text-small">{{ gallery.describe }}</p>
-
 
     {% if request.user.is_staff %}
     <div class="mt-5 py-5 border-t border-gray-200">
@@ -30,9 +16,5 @@
         </a>
     </div>
     {% endif %}
-
 </div>
-
 {% endblock %}
-</body>
-</html>

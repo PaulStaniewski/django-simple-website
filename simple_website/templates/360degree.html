@@ -9,19 +9,14 @@
       </div>
     </div>
   </section>
-
   <div class="album py-5 bg-light">
     <div class="container">
-
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {% for image in images.all %}
         <div class="col">
-
           <div class="card shadow-sm">
             <a href="{{ image.id }}"></a>
             <img src="{{ image.image.url }}" width="100%">
-
-
             <div class="card-body">
               <p class="card-text">
                 {{ image.summary }}
@@ -30,17 +25,12 @@
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{{image.id}}">View</a></button>
                 </div>
-
               </div>
             </div>
           </div>
-
         </div>
         {% endfor %}
-
      </div>
     </div>
   </div>
-
-
-  {% endblock %}
+ {% endblock %}
